@@ -8,6 +8,7 @@ const Banner = () => {
       {showroom.map((banneritem, index) => {
         return (
           <BannerItem
+            key={index}
             title={banneritem.title}
             desc={banneritem.desc}
             link={banneritem.link}

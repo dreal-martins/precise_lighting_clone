@@ -1,22 +1,21 @@
 import axios from 'axios';
 import { useState, useEffect, useContext } from 'react';
 import { Cartcontext } from '../components/context/Context';
+import { showroomitem } from '../data';
 
 const Shop = () => {
-  const [data, setData] = useState([]);
-  const fetchData = async () => {
-    const response = await axios.get('http://fakestoreapi.com/products');
-    setData(response.data);
-    console.log(data);
-  };
+  // const [data, setData] = useState([]);
+  // const fetchData = async () => {
+  //   const response = await axios.get('http://fakestoreapi.com/products');
+  //   setData(response.data);
+  // };
 
-  useEffect(() => {
-    fetchData();
-  }, []);
+  // useEffect(() => {
+  //   fetchData();
+  // }, []);
 
   const Globalstate = useContext(Cartcontext);
   const dispatch = Globalstate.dispatch;
-  console.log(Globalstate);
 
   return (
     <>
@@ -29,7 +28,7 @@ const Shop = () => {
       </section>
       <section className="section_two_shop">
         <div className="section_two_shop_details">
-          {data.map((item, index) => {
+          {showroomitem.map((item, index) => {
             item.quantity = 1;
             return (
               <div className="section_two_shop_data" key={index}>
@@ -37,7 +36,7 @@ const Shop = () => {
                   <img src={item.image} alt="" />
                 </div>
                 <p>{item.title.substring(0, 45)}...</p>
-                <h3>$. {item.price}</h3>
+                <h3>${item.price}</h3>
                 <button
                   onClick={() => dispatch({ type: 'ADD', payload: item })}
                 >

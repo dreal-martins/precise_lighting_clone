@@ -8,7 +8,7 @@ export default function FeaturedRow() {
       {featured.map((featuredItem, index) => {
         return (
           <FeaturedRowItem
-            key={featuredItem.id}
+            key={index}
             title={featuredItem.title}
             customer={featuredItem.customer}
             icon={featuredItem.icon}
