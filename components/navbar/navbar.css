@@ -1,0 +1,139 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e3e6f3;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+  height: 6vh;
+  width: 100%;
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2.3rem;
+  position: relative;
+}
+
+.logo {
+  flex: 1;
+}
+
+.logo img {
+  width: 3rem;
+}
+
+.search {
+  flex: 3;
+  height: 50%;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.search input {
+  height: 100%;
+  width: 90%;
+  border: none;
+  padding-left: 0.4rem;
+}
+
+.search input:focus {
+  outline: none;
+}
+
+.handLens {
+  width: 10%;
+  color: #fff;
+}
+
+.menu_btn {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav_menu {
+  position: absolute;
+  right: 0;
+  top: 6vh;
+  width: 0%;
+  height: 92vh;
+  background-color: #e3e6f3;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  transition: all ease-in-out 0.5s;
+}
+
+.nav_menu.active {
+  width: 50%;
+}
+
+.nav_menu li {
+  height: 7vh;
+  display: flex;
+  align-items: center;
+  border-left: 5px solid #b2bdf1;
+  padding-left: 1rem;
+  margin-top: 0.7rem;
+}
+
+@media (min-width: 1025px) {
+  .header {
+    height: 10vh;
+  }
+
+  .logo img {
+    width: 5rem;
+  }
+
+  .search {
+    flex: 4;
+  }
+
+  .menu_btn {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    visibility: hidden;
+  }
+
+  .nav_menu {
+    position: inherit;
+    right: 0;
+    top: 0;
+    width: 32%;
+    height: initial;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    transition: all ease-in-out 0.5s;
+  }
+
+  .nav_menu.active {
+    width: 30%;
+  }
+
+  .nav_menu li {
+    /* height: initial; */
+    display: flex;
+    align-items: center;
+    border-left: none;
+    padding: 0.9rem;
+    margin-top: 0rem;
+  }
+
+  .nav_menu li:hover {
+    background-color: #b2bdf1;
+    transition: all ease-in-out 0.5s;
+    border-radius: 12px;
+  }
+}

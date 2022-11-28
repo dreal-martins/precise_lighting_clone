@@ -1,0 +1,111 @@
+.section_one_contact {
+  margin-top: 40px;
+  height: 50vh;
+}
+
+.section_one_contact_img {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)),
+    url(https://images.pexels.com/photos/7535062/pexels-photo-7535062.jpeg?auto=compress&cs=tinysrgb&w=600);
+  width: 100%;
+  height: 50vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.section_one_contact_img h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  font-size: 3rem;
+  color: #fff;
+}
+
+.section_two_contact_details {
+  margin-top: 20px;
+}
+
+.section_two_contact_details h2 {
+  margin-left: 15px;
+}
+.section_two_contact_details h3 {
+  margin-top: 10px;
+  margin-left: 15px;
+}
+.section_two_contact_details h5 {
+  margin-top: 10px;
+  margin-left: 15px;
+  margin-bottom: 15px;
+}
+
+.section_two_contact_details iframe {
+  width: 100%;
+}
+
+.form-details {
+  display: flex;
+  justify-content: space-between;
+  padding: 80px;
+  border: 1px solid #e1e1e1;
+  margin: 10px;
+  padding: 30px 10px;
+  flex-wrap: wrap;
+}
+
+.form-details form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.form-details form input,
+.form-details form textarea {
+  width: 100%;
+  padding: 12px;
+  outline: none;
+  margin-bottom: 20px;
+  border: 1px solid #e1e1e1;
+}
+
+.form-details form button {
+  background-color: darkgray;
+  padding: 12px;
+  border: none;
+  color: #fff;
+}
+
+@media (min-width: 990px) {
+  .section_two_contact {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .form-details {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
+    padding: 80px;
+    border: 1px solid #e1e1e1;
+  }
+
+  .form-details form {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .form-details form input,
+  .form-details form textarea {
+    width: 100%;
+    padding: 12px;
+    outline: none;
+    margin-bottom: 20px;
+    border: 1px solid #e1e1e1;
+  }
+}
