@@ -6,7 +6,7 @@
 .section_one_contact_img {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)),
     url(https://images.pexels.com/photos/7535062/pexels-photo-7535062.jpeg?auto=compress&cs=tinysrgb&w=600);
-  width: 100%;
+  width: 110%;
   height: 50vh;
   background-repeat: no-repeat;
   background-size: cover;
@@ -19,6 +19,7 @@
   justify-content: center;
   height: 50vh;
   font-size: 3rem;
+  width: 100%;
   color: #fff;
 }
 

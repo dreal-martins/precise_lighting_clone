@@ -2,6 +2,8 @@ import axios from 'axios';
 import { useState, useEffect, useContext } from 'react';
 import { Cartcontext } from '../components/context/Context';
 import { showroomitem } from '../data';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Shop = () => {
   // const [data, setData] = useState([]);
@@ -16,6 +18,18 @@ const Shop = () => {
 
   const Globalstate = useContext(Cartcontext);
   const dispatch = Globalstate.dispatch;
+  const notify = () => {
+    toast.success('Item added to cart', {
+      position: 'bottom-center',
+      autoClose: 3000,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: false,
+      progress: undefined,
+      theme: 'colored',
+    });
+  };
 
   return (
     <>
@@ -35,13 +49,30 @@ const Shop = () => {
                 <div className="section_two_shop_data_img">
                   <img src={item.image} alt="" />
                 </div>
-                <p>{item.title.substring(0, 45)}...</p>
-                <h3>${item.price}</h3>
+                <div className="shop_cat">
+                  <p>{item.title.substring(0, 20)}...</p>
+                  <h3>${item.price}</h3>
+                </div>
                 <button
-                  onClick={() => dispatch({ type: 'ADD', payload: item })}
+                  onClick={() => {
+                    if (notify) {
+                      toast.success('Item added to cart', {
+                        position: 'bottom-center',
+                        autoClose: 3000,
+                        hideProgressBar: true,
+                        closeOnClick: true,
+                        pauseOnHover: false,
+                        draggable: false,
+                        progress: undefined,
+                        theme: 'colored',
+                      });
+                    }
+                    dispatch({ type: 'ADD', payload: item });
+                  }}
                 >
                   Add to cart
                 </button>
+                <ToastContainer />
               </div>
             );
           })}

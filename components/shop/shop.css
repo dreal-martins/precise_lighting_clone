@@ -23,48 +23,41 @@
 }
 
 .section_two_shop_details {
+  /* background-color: red; */
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 15px;
-  /* height: 60vh; */
+  min-height: 60vh;
   flex-direction: column;
 }
 
 .section_two_shop_data {
   background-color: lightgray;
-  border-radius: 12px;
-  width: 80%;
+  width: 90%;
+  height: 90%;
   margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .section_two_shop_data_img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin: 12px;
-  padding: 10px;
+  width: 100%;
+  height: 50%;
 }
 
 .section_two_shop_details img {
-  height: 30vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 100%;
   width: 100%;
-  border-radius: 18px;
+  object-fit: cover;
 }
 
-.section_two_shop_details p {
-  margin-left: 15px;
-  margin-top: 15px;
-  font-weight: 600;
+.shop_cat {
+  display: flex;
 }
 
 .section_two_shop_details h3 {
-  margin-left: 15px;
-  margin-top: 10px;
+  font-weight: 100;
 }
 
 .section_two_shop_details button {
@@ -75,6 +68,13 @@
   margin-top: 5px;
   margin-bottom: 8px;
   border: 1px solid black;
+  transition: all ease-in-out 0.3s;
+  cursor: pointer;
+}
+
+.section_two_shop_details button:hover {
+  background-color: #000;
+  color: #fff;
 }
 
 @media (min-width: 1025px) {

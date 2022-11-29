@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 import Banner from '../components/featured/Banner';
 import FeaturedRow from '../components/featured/FeaturedRow';
