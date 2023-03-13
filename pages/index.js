@@ -5,7 +5,8 @@ import FeaturedRow from '../components/featured/FeaturedRow';
 import Footer from '../components/footer/Footer';
 import ShopBotton from '../components/Home/ShopButton';
 
-const HeroImg = 'https://www.preciselighting.ng/images/banner.gif';
+const HeroImg =
+  'https://www.preciselighting.ng/_next/image?url=%2Fimages%2Fhome-banner19.png&w=1080&q=75';
 const SectTwoImg =
   'https://images.pexels.com/photos/149767/pexels-photo-149767.jpeg?auto=compress&cs=tinysrgb&w=600';
 
